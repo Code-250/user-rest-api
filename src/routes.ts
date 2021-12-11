@@ -5,6 +5,6 @@ import { createUserSchema } from "./schema/user.schema";
 
 const routes = (app: Express) => {
   app.get("/health", (req: Request, res: Response) => res.sendStatus(200));
-  app.post("/create-user", Validate(createUserSchema), createUserHandler);
+  app.post("/api/create-user", Validate(createUserSchema), createUserHandler);
 };
 export default routes;
